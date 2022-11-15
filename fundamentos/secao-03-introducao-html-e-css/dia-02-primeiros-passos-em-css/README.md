@@ -1,0 +1,1 @@
+# Exercícios do Dia 02 - Primeiros passos em CSS
