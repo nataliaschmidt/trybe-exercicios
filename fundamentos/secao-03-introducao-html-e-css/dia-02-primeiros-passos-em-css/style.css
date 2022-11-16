@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+body{
+    font-size: 16px;
+}
+h1 {
+    font-size: 65px;
+    color: #fe7f2d;
+    font-family: sans-serif;
+}
+p{
+font-weight: 600;
+font-size: 3em;
+font-style: italic;
+}
+#lista {
+    background-color: #a1c181;
+    line-height: 20px;
+}
+.bg {
+    background-color: #619b8a;
+}
