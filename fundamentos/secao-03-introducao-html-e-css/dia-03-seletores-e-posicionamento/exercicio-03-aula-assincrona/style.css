@@ -1,14 +1,3 @@
-/* 
-/* PARA CADA H3 TER UMA COR ÚNICA SEM USAR CLASSE, seleciona-se o primeiro h3 da primeira div*/
-/* div:nth-of-type(1)>h3 {
-    color: blueviolet;
-} */
-
-/* Deixe as tags ímpares <h3> com o texto em itálico. */
-/* div:nth-child(odd) h3 {
-    font-style: italic
-} */
-
 /* todos os itens das listas ordenadas tenham cor de fundo amarela. Se a númeração for par (even ou 2n) a cor da fonte é verde, se for ímpar (odd ou 2n+1) usar text transform para deixar todas em maiúsculos */
 
 ol li {
