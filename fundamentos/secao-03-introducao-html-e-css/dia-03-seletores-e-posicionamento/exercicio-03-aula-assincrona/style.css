@@ -1,0 +1,81 @@
+/* 
+/* PARA CADA H3 TER UMA COR ÚNICA SEM USAR CLASSE, seleciona-se o primeiro h3 da primeira div*/
+/* div:nth-of-type(1)>h3 {
+    color: blueviolet;
+} */
+
+/* Deixe as tags ímpares <h3> com o texto em itálico. */
+/* div:nth-child(odd) h3 {
+    font-style: italic
+} */
+
+/* todos os itens das listas ordenadas tenham cor de fundo amarela. Se a númeração for par (even ou 2n) a cor da fonte é verde, se for ímpar (odd ou 2n+1) usar text transform para deixar todas em maiúsculos */
+
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-child(2n) {
+    color: green;
+}
+
+ol li:nth-child(2n +1){
+    text-transform: uppercase   ;
+}
+
+/* Faça todas tags Header possuírem cor de fonte vermekha, se alguma delas estiver em italico,a aumente seu tamanho para 40px e acrescente uma borda de 1px sólida e preta */
+
+h1, h3 {
+    color: red;
+}
+
+h1 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+/* faça todas as li terem 20px de tamanho de fonte e, para todo texto em itálico de alguma li, utilize a propriedade font weight. */
+
+li {
+    font-size: 20px;
+}
+
+li em{
+    font-weight: bolder;
+}
+
+/* Na listagem de linguagem de programação ,faça com que as 3 primeiras da lista possuam cor de fonte azul, e se alguma possuir java no texto utilize a cor de fundo rosa. */
+
+.linguagens li:not(:nth-child(n + 4)) {
+    color: blue;
+  }
+
+  .bg-rosa {
+background-color: pink;
+  }
+
+  /* Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site" */
+
+  .aliados li a:hover{
+    font-weight: bolder;
+  }
+
+  #stf:hover{
+    color: orange;
+  }
+
+  #w3:hover{
+    color: green;
+  }
+
+  #mdn:hover{
+    color: black;
+  }
+
+  #dev:hover{
+    color: yellow;
+  }
+
+  #trybe:hover{
+    color: greenyellow;
+  }
