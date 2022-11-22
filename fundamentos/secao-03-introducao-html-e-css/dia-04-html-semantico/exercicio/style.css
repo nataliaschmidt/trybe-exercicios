@@ -1,7 +1,129 @@
-table{
- border: 1px solid black;
- width: 100px;
+@charset "UTF-8";
+@import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    background-color: #fcfeff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
 }
-td{
-    border: 1px solid black;
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: #006d77;
+    text-shadow: 1px 2px 4px gray;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    color: #e29578;
+}
+
+nav a:hover {
+    color: #006d77;
+}
+
+table {
+    border: 2px solid #006d77;
+    width: 100px;
+    position: relative;
+    left: 10%;
+
+
+}
+
+td {
+    border: 2px solid #006d77;
+
+}
+
+.foto-frontal {
+    width: 500px;
+    border-radius: 100%;
+    border: 5px solid white;
+    box-shadow: 2px 4px 8px rgb(169, 167, 167);
+    position: absolute;
+    left: 35%;
+    top: 40%;
+}
+
+h3 {
+    color: #83c5be;
+    text-decoration: underline;
+}
+
+section {
+    text-align: justify;
+    width: 60%;
+    margin: 50px;
+}
+
+.foto-visao {
+    width: 500px;
+    border-radius: 100%;
+    border: 5px solid white;
+    box-shadow: 2px 4px 8px rgb(169, 167, 167);
+    position: absolute;
+    left: 70%;
+    top: 1400px;
+}
+
+.video {
+    position: absolute;
+    left: 70%;
+    top: 85%;
+}
+
+
+#referencias a {
+    display: block;
+    padding: 10px;
+    color: #e29578;
+    text-decoration: none;
+}
+
+#referencias a:hover {
+    color: #006d77;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+aside {
+    background-color: #83c5bf63;
+    color: #006d77;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 75%;
+    top: 45%;
+    border-radius: 15%;
+
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: #e29578;
+    padding: 10px;
+}
+
+aside a:hover {
+    color: #006d77;
 }
