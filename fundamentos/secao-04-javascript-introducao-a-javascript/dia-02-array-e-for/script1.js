@@ -29,10 +29,37 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // }
 
 // Utilizando for, descubra qual o maior valor contido no array e imprima-o;
-let higherNumber = numbers[0];
-for (value of numbers){
-if (value > higherNumber){
-    higherNumber = numbers[value]
-    console.log(higherNumber);
+// let higherNumber = numbers[0];
+// for (let i = 1; i < numbers.length; i += 1){ //começa na posição de index 1 pois a posição 0 já é meu menor elemento
+// if (numbers[i] > higherNumber){
+//     higherNumber = numbers[i]
+// }
+// }
+// console.log(higherNumber); //console log fora do escopo para me entregar somente o número final
+
+// Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
+
+// let odd=0;
+// for (let i = 0; i < numbers.length; i += 1){
+//     if (numbers[i] % 2 != 0){
+//         console.log(`Número ímpar encontrado na array ${numbers[i]}`);
+//         odd += 1
+//         console.log(`Soma de quantos nº ímpares ${odd}`);
+//     } }
+
+//     if (odd ===0){
+//         console.log(`Não há números ímpares no array`);
+//     } else {
+//         console.log(`Existem no total ${odd} números ímpares no array`);
+//     }
+
+
+//Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+let lowerValue = numbers[0];
+for (let i = 0; i < numbers.length; i += 1){
+    if (lowerValue > numbers[i]){
+        lowerValue = numbers[i]
+        console.log(lowerValue)
+    }
 }
-}
+console.log(`O menor número do array é ${lowerValue}`);
