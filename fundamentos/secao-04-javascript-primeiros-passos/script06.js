@@ -7,23 +7,21 @@
 // Porcentagem < 50 -> F
 // O código deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
-let note = 70;
+let note = -10;
 
-if (note >= 90){
-    console.log('Conceito A');
-}
-else if (note >= 80){
-    console.log('Conceito B');
-}
-else if (note >= 70){
-    console.log('Conceito C');
-}
-else if (note >= 60){
-    console.log('Conceito D');
-}
-else if (note >= 50){
-    console.log('Conceito E');
-}
-else {
-console.log('Conceio F');
+
+if (note < 0 || note > 100) {
+  console.log("Erro, sua nota está incorreta!");
+} else if (note >= 90) {
+  console.log("Conceito: A");
+} else if (note >= 80) {
+  console.log("Conceito: B");
+} else if (note >= 70) {
+  console.log("Conceito: C");
+} else if (note >= 60) {
+  console.log("Conceito: D");
+} else if (note >= 50) {
+  console.log("Conceito: E");
+} else {
+  console.log("Conceito: F");
 }
