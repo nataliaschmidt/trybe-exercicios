@@ -55,11 +55,11 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 
 //Utilizando for, descubra qual o menor valor contido no array e imprima-o;
-let lowerValue = numbers[0];
-for (let i = 0; i < numbers.length; i += 1){
-    if (lowerValue > numbers[i]){
-        lowerValue = numbers[i]
-        console.log(lowerValue)
-    }
-}
-console.log(`O menor número do array é ${lowerValue}`);
+// let lowerValue = numbers[0];
+// for (let i = 0; i < numbers.length; i += 1){
+//     if (lowerValue > numbers[i]){
+//         lowerValue = numbers[i]
+//         console.log(lowerValue)
+//     }
+// }
+// console.log(`O menor número do array é ${lowerValue}`);
