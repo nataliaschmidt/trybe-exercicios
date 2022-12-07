@@ -32,3 +32,10 @@ const correctText = () => {
 }
 
 correctText()
+
+//Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo;
+const modifyParagraph = () =>{
+  let paragraph = document.getElementsByTagName('p')[0];
+  paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+}
+modifyParagraph()
