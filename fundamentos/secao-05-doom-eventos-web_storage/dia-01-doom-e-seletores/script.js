@@ -1,17 +1,12 @@
-//document.getElementById();
-//document.getElementsByClassName();
-//document.getElementsByTagName();
-
-function newText(){
-  let future =  document.getElementsByTagName('p')[1];
-    future.innerHTML = `Daqui 02 anos me vejo trabalhando como desenvolvedora e decolando na minha carreira!`;   
+const h3 = document.querySelectorAll('.emergency-tasks h3');
+//console.log(h3);
+for (let index = 0; index < h3.length; index +=1){
+    h3[index].style.backgroundColor = '#a500f2'
 }
 
-newText()
 
-function newColor (){
-    let newColor = document.getElementsByClassName('main-content')[0]
-    newColor.style.background = 'rgb(76,164,109)';
+const h3NoEmergency = document.querySelectorAll('.no-emergency-tasks h3');
+console.log(h3NoEmergency);
+for (let index = 0; index < h3NoEmergency.length; index += 1){
+    h3NoEmergency[index].style.backgroundColor = '#212522'
 }
-
-newColor ();
