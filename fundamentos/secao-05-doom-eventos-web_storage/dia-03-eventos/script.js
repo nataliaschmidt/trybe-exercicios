@@ -25,9 +25,12 @@ const createDaysOfTheMonth = () => {
         dateListItem.innerHTML = date
         ulDays.appendChild(dateListItem);
 
-        if (date === 24 || date === 25 || date === 31) dateListItem.classList.add('holiday');
-        else if (date === 4 || date === 11 || date === 18 || date === 25) dateListItem.classList.add('friday');
-    }
+        if (date === 24 || date === 31) dateListItem.classList.add('holiday');
+        else if (date === 4 || date === 11 || date === 18) dateListItem.classList.add('friday');
+     else if (date === 25) {
+        dateListItem.classList.add('holiday');
+        dateListItem.classList.add('friday');
+    }}
 }
 
 // Função para criar um botão com o nome feriados
@@ -44,13 +47,13 @@ const btnHoliday = (feriados) => {
 //     let buttonContainer = document.querySelector('.buttons-container');
 //     let newButton = document.createElement('button');
 //     let newButtonID = 'btn-holiday';
-  
+
 //     newButton.innerHTML = buttonName;
 //     newButton.id = newButtonID;
-    
+
 //     buttonContainer.appendChild(newButton);
 //   }
-  
+
 //   createHolidayButton('Feriados')
 
 // Função para alterar cor de fundo dos feriados
@@ -61,21 +64,42 @@ const btnBackgroundColorHoliday = () => {
     const backgroundColorOrigin = 'rgb(238,238,238)'; // armazena a cor da configuração inicial;
     const newColor = 'pink'
 
-        getBtn.addEventListener('click', () => { 
-            for (index = 0; index < getHoliday.length; index +=1){
-           if (getHoliday[index].style.backgroundColor === newColor) getHoliday[index].style.backgroundColor = backgroundColorOrigin;
-           else getHoliday[index].style.backgroundColor = newColor;
-        }})
-    }
+    getBtn.addEventListener('click', () => {
+        for (index = 0; index < getHoliday.length; index += 1) {
+            if (getHoliday[index].style.backgroundColor === newColor) getHoliday[index].style.backgroundColor = backgroundColorOrigin;
+            else getHoliday[index].style.backgroundColor = newColor;
+        }
+    })
+}
 
-    // Função botão sexta feira
-    const btnFriday = () => {
-        const divBtn = document.querySelector('.buttons-container');
-        const btnFriday = document.createElement('button');
-        btnFriday.id = "btn-friday"
-        btnFriday.innerHTML = "Sexta-feira"
-        divBtn.appendChild(btnFriday);
-    }
+// Função botão sexta feira
+const btnFriday = () => {
+    const divBtn = document.querySelector('.buttons-container');
+    const btnFriday = document.createElement('button');
+    btnFriday.id = "btn-friday"
+    btnFriday.innerHTML = "Sexta-feira"
+    divBtn.appendChild(btnFriday);
+}
+
+// Criar uma função que modifique o texto da sexta feira
+
+const friday = (fridayDayArray) => {
+    const btnFriday = document.getElementById('btn-friday')
+    const fridayDay = document.querySelectorAll('.friday');
+    const text = "It's Friday 🎉"
+
+    btnFriday.addEventListener('click', () => {
+        for (let index = 0; index < fridayDay.length; index += 1){
+            if (fridayDay[index].innerHTML !== text){
+                fridayDay[index].innerHTML = text;
+            }
+            else {
+                fridayDay[index].innerHTML = fridayDayArray[index];
+            }
+        }
+    })
+
+}
 
 
 
@@ -85,3 +109,4 @@ createDaysOfTheMonth();
 btnHoliday();
 btnBackgroundColorHoliday();
 btnFriday();
+friday([4, 11, 18, 25]);
