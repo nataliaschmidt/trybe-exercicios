@@ -34,13 +34,44 @@ const createDaysOfTheMonth = () => {
 const btnHoliday = (feriados) => {
     const divBtn = document.querySelector('.buttons-container')
     const btn = document.createElement('button');
-    btn.className = 'btn-holiday'
-    btn.innerHTML = 'Feriados'
-    divBtn.appendChild(btn)
+    btn.id = 'btn-holiday';
+    btn.innerHTML = 'Feriados';
+    divBtn.appendChild(btn);
 }
+
+// Função criada no gabarito
+// const createHolidayButton = (buttonName) => {
+//     let buttonContainer = document.querySelector('.buttons-container');
+//     let newButton = document.createElement('button');
+//     let newButtonID = 'btn-holiday';
+  
+//     newButton.innerHTML = buttonName;
+//     newButton.id = newButtonID;
+    
+//     buttonContainer.appendChild(newButton);
+//   }
+  
+//   createHolidayButton('Feriados')
+
+// Função para alterar cor de fundo dos feriados
+
+const btnBackgroundColorHoliday = () => {
+    const getBtn = document.getElementById('btn-holiday');
+    const getHoliday = document.querySelectorAll('.holiday');
+    const backgroundColorOrigin = 'rgb(238,238,238)'; // armazena a cor da configuração inicial;
+    const newColor = 'pink'
+
+        getBtn.addEventListener('click', () => { 
+            for (index = 0; index < getHoliday.length; index +=1){
+           if (getHoliday[index].style.backgroundColor === newColor) getHoliday[index].style.backgroundColor = backgroundColorOrigin;
+           else getHoliday[index].style.backgroundColor = newColor;
+        }})
+    }
+
 
 
 // Chamada das Funções
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 btnHoliday();
+btnBackgroundColorHoliday();
