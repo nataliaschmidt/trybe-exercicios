@@ -68,6 +68,15 @@ const btnBackgroundColorHoliday = () => {
         }})
     }
 
+    // Função botão sexta feira
+    const btnFriday = () => {
+        const divBtn = document.querySelector('.buttons-container');
+        const btnFriday = document.createElement('button');
+        btnFriday.id = "btn-friday"
+        btnFriday.innerHTML = "Sexta-feira"
+        divBtn.appendChild(btnFriday);
+    }
+
 
 
 // Chamada das Funções
@@ -75,3 +84,4 @@ createDaysOfTheWeek();
 createDaysOfTheMonth();
 btnHoliday();
 btnBackgroundColorHoliday();
+btnFriday();
