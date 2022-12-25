@@ -127,6 +127,16 @@ const addTask = (task) => {
     const elemento = document.createElement('span');
     elemento.innerHTML = task;
 myTask.appendChild(elemento);
+}
+
+// 8 - função que adicione uma legenda com cor para a tarefa
+
+const legend = (color) => {
+    const myTask = document.querySelector('.my-tasks')
+    const task = document.createElement ('div');
+    task.className = 'task';
+    task.style.backgroundColor = color;
+    myTask.appendChild(task);
 
 }
 
@@ -140,3 +150,4 @@ friday([4, 11, 18, 25]);
 mouseOver();
 mouseOut();
 addTask('cozinhar');
+legend('#d8e2dc');
