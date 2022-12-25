@@ -13,6 +13,7 @@ const createDaysOfTheWeek = () => {
     };
 }
 
+// Função para criar os dias do mês com suas respectivas classes
 const createDaysOfTheMonth = () => {
     const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     const ulDays = document.getElementById('days');
@@ -23,14 +24,23 @@ const createDaysOfTheMonth = () => {
         dateListItem.className = "day"
         dateListItem.innerHTML = date
         ulDays.appendChild(dateListItem);
-        
+
         if (date === 24 || date === 25 || date === 31) dateListItem.classList.add('holiday');
-else if (date === 4 || date === 11 || date === 18 || date === 25) dateListItem.classList.add('friday');
+        else if (date === 4 || date === 11 || date === 18 || date === 25) dateListItem.classList.add('friday');
     }
 }
 
+// Função para criar um botão com o nome feriados
+const btnHoliday = (feriados) => {
+    const divBtn = document.querySelector('.buttons-container')
+    const btn = document.createElement('button');
+    btn.className = 'btn-holiday'
+    btn.innerHTML = 'Feriados'
+    divBtn.appendChild(btn)
+}
 
 
 // Chamada das Funções
 createDaysOfTheWeek();
 createDaysOfTheMonth();
+btnHoliday();
