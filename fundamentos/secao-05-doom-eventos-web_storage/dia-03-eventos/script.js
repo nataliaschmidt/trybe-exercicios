@@ -140,6 +140,39 @@ const legend = (color) => {
 
 }
 
+// 9 - Função para selecionar a tarefa
+
+const setTaskClass = () => {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let myTasks = document.querySelector('.task');
+    myTasks.addEventListener('click', (event) => {
+      if (selectedTask.length === 0) {
+        event.target.className = 'task selected';
+      } else {
+        event.target.className = 'task';
+      }
+    });
+  }
+
+// 10 - Implementar cor da tarefa ao calendário
+const setDayColor = () => {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let days = document.querySelector('#days');
+    let taskDiv = document.querySelector('.task');
+    let taskColor = taskDiv.style.backgroundColor;
+    
+    days.addEventListener('click', (event) => {
+      let eventTargetColor = event.target.style.color;
+      if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+        let color = selectedTask[0].style.backgroundColor; // Pega a cor de fundo do primeiro elemento salvo na variável "selectedTask" e salva na variável "color"
+        event.target.style.color = color; // atribui a cor salva na variável "color" ao evento alvo
+      } else if (eventTargetColor === taskColor) {
+        event.target.style.color = 'rgb(119,119,119)';  // Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+      }
+    });
+  }
+  
+
 // Chamada das Funções
 createDaysOfTheWeek();
 createDaysOfTheMonth();
@@ -150,4 +183,6 @@ friday([4, 11, 18, 25]);
 mouseOver();
 mouseOut();
 addTask('cozinhar');
-legend('#d8e2dc');
+legend('#119da4');
+setTaskClass();
+setDayColor();  
