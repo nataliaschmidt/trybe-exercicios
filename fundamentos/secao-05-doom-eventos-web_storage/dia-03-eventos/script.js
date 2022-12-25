@@ -13,7 +13,7 @@ const createDaysOfTheWeek = () => {
     };
 }
 
-// Função para criar os dias do mês com suas respectivas classes
+// 1 - Função para criar os dias do mês com suas respectivas classes
 const createDaysOfTheMonth = () => {
     const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     const ulDays = document.getElementById('days');
@@ -27,13 +27,14 @@ const createDaysOfTheMonth = () => {
 
         if (date === 24 || date === 31) dateListItem.classList.add('holiday');
         else if (date === 4 || date === 11 || date === 18) dateListItem.classList.add('friday');
-     else if (date === 25) {
-        dateListItem.classList.add('holiday');
-        dateListItem.classList.add('friday');
-    }}
+        else if (date === 25) {
+            dateListItem.classList.add('holiday');
+            dateListItem.classList.add('friday');
+        }
+    }
 }
 
-// Função para criar um botão com o nome feriados
+// 2 - Função para criar um botão com o nome feriados
 const btnHoliday = (feriados) => {
     const divBtn = document.querySelector('.buttons-container')
     const btn = document.createElement('button');
@@ -56,7 +57,7 @@ const btnHoliday = (feriados) => {
 
 //   createHolidayButton('Feriados')
 
-// Função para alterar cor de fundo dos feriados
+// 3 - Função para alterar cor de fundo dos feriados
 
 const btnBackgroundColorHoliday = () => {
     const getBtn = document.getElementById('btn-holiday');
@@ -72,7 +73,7 @@ const btnBackgroundColorHoliday = () => {
     })
 }
 
-// Função botão sexta feira
+// 4 - Função botão sexta feira
 const btnFriday = () => {
     const divBtn = document.querySelector('.buttons-container');
     const btnFriday = document.createElement('button');
@@ -81,7 +82,7 @@ const btnFriday = () => {
     divBtn.appendChild(btnFriday);
 }
 
-// Criar uma função que modifique o texto da sexta feira
+// 5 - Criar uma função que modifique o texto da sexta feira
 
 const friday = (fridayDayArray) => {
     const btnFriday = document.getElementById('btn-friday')
@@ -89,8 +90,8 @@ const friday = (fridayDayArray) => {
     const text = "It's Friday 🎉"
 
     btnFriday.addEventListener('click', () => {
-        for (let index = 0; index < fridayDay.length; index += 1){
-            if (fridayDay[index].innerHTML !== text){
+        for (let index = 0; index < fridayDay.length; index += 1) {
+            if (fridayDay[index].innerHTML !== text) {
                 fridayDay[index].innerHTML = text;
             }
             else {
@@ -101,7 +102,33 @@ const friday = (fridayDayArray) => {
 
 }
 
+// 6 - Funções de Zoom
 
+const mouseOver = () => {
+    let days = document.querySelector('#days'); //vai atuar na ul que contém a lista
+    days.addEventListener('mouseover', (event) => {
+        event.target.style.fontSize = '30px'
+        event.target.style.fontWeight = '600';
+
+    });
+}
+
+const mouseOut = () => {
+    let days = document.querySelector('#days');
+    days.addEventListener('mouseout', (event) => {
+        event.target.style.fontSize = '20px';
+        event.target.style.fontWeight = '200';
+    });
+}
+
+// 7 - Adição de tarefa
+const addTask = (task) => {
+    const myTask = document.querySelector('.my-tasks')
+    const elemento = document.createElement('span');
+    elemento.innerHTML = task;
+myTask.appendChild(elemento);
+
+}
 
 // Chamada das Funções
 createDaysOfTheWeek();
@@ -110,3 +137,6 @@ btnHoliday();
 btnBackgroundColorHoliday();
 btnFriday();
 friday([4, 11, 18, 25]);
+mouseOver();
+mouseOut();
+addTask('cozinhar');
