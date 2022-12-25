@@ -40,9 +40,6 @@ sectionRigth.style.textAlign = 'center'
 sectionRigth.style.color ='red'
 main.appendChild(sectionRigth);
 
-
-
-
 // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image.
 const imagem = document.createElement('img');
 imagem.className = 'small-image';
