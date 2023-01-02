@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+#btns {
+    width: max-content;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#background, #font-color, #line-spacing, #font-size, #font-family {
+    width: max-content;
+    text-align: center;
+}
+
+.btn-background, .btn-font-color, .btn-font-size, .btn-line-spacing, .btn-font-family {
+display: block;
+margin: auto;
+border: 1px solid black;
+margin-bottom: 2px;
+font-size: 0.8em;
+}
+
+h1 {
+    text-align: center;
+}
+main h3 {
+    text-align: center;
+}
+footer {
+    background-color: rgb(241, 239, 239);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+footer h3 {
+    color: gray;
+    margin: auto;
+}
