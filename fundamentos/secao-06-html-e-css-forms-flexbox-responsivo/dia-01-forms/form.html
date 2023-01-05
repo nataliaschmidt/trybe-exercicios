@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" charset="UTF-8" defer></script>
+  <title>Form TrybeTrip</title>
 </head>
+
 <body>
-  
+  <header>
+    <h1>Formulário para concorrer a viagem</h1>
+  </header>
+
+  <form action="" method="get" enctype="multipart/form-data">
+    <fieldset>
+      <label for="input-name">Nome:
+        <input type="text" name="nome" id="input-name" placeholder="Digite seu nome completo" minlength="10" maxlength="40">
+      </label>
+      <br>
+      <label for="input-email">E-mail:
+        <input type="email" name="email" id="input-email">
+      </label>
+      <br>
+      <label for="option-1">
+        <input type="radio" name="option" id="option-1">Opção 1
+      </label>
+      <label for="option-2">
+        <input type="radio" name="option" id="option-2">Opção 2
+      </label>
+      <label for="option-3">
+        <input type="radio" name="option" id="option-3">Opção 3
+      </label>
+      <label for="option-4">
+        <input type="radio" name="option" id="option-4">Opção 4
+      </label>
+      <br>
+      <p>Espaço para digitar a resposta:</p>
+      <textarea name="text-resposta" id="text-resposta" cols="30" rows="10"></textarea>
+      <br>
+      <label for="date">Data:
+        <input type="date" name="date" id="date">
+      </label>
+      <br>
+      <label for="checkbox-1">
+        <input type="checkbox" name="checkbox-concordo" id="checkbox-1">Concordo 1
+      </label>
+      <br>
+      <label for="checkbox-2">
+        <input type="checkbox" name="checkbox-concordo" id="checkbox-2">Concordo 2
+      </label>
+    </fieldset>
+<button type="submit" id="submit">Enviar</button>
+<button type="reset" id="reset">Apagar</button>
+  </form>
 </body>
+
 </html>
