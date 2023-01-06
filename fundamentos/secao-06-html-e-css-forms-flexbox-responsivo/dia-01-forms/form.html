@@ -15,46 +15,51 @@
     <h1>Formulário para concorrer a viagem</h1>
   </header>
 
-  <form action="" method="get" enctype="multipart/form-data">
+  <form action="" method="get" enctype="multipart/form-data" id="form">
     <fieldset>
       <label for="input-name">Nome:
         <input type="text" name="nome" id="input-name" placeholder="Digite seu nome completo" minlength="10" maxlength="40">
       </label>
       <br>
       <label for="input-email">E-mail:
-        <input type="email" name="email" id="input-email">
+        <input type="email" name="email" id="input-email" placeholder="Digite seu e-mail" minlength="10" maxlength="50">
       </label>
       <br>
+      <p>Marque seu destino preferido:</p>
       <label for="option-1">
-        <input type="radio" name="option" id="option-1">Opção 1
+        <input type="radio" class="btn-radio" name="option" id="option-1">Cidade
       </label>
       <label for="option-2">
-        <input type="radio" name="option" id="option-2">Opção 2
+        <input type="radio" class="btn-radio" name="option" id="option-2">Campo
       </label>
       <label for="option-3">
-        <input type="radio" name="option" id="option-3">Opção 3
+        <input type="radio" class="btn-radio" name="option" id="option-3">Praia
       </label>
       <label for="option-4">
-        <input type="radio" name="option" id="option-4">Opção 4
+        <input type="radio" class="btn-radio" name="option" id="option-4">Montanha
       </label>
       <br>
-      <p>Espaço para digitar a resposta:</p>
-      <textarea name="text-resposta" id="text-resposta" cols="30" rows="10"></textarea>
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+      <textarea name="text-resposta" id="text-resposta" cols="30" rows="10" maxlength="500"></textarea>
       <br>
-      <label for="date">Data:
+      <label for="date">Qual a melhor data para realizar sua viagem?
         <input type="date" name="date" id="date">
       </label>
       <br>
-      <label for="checkbox-1">
-        <input type="checkbox" name="checkbox-concordo" id="checkbox-1">Concordo 1
+       <p>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+      <label for="checkbox-oportunidades"">
+        <input type="checkbox" name="checkbox-1" id="checkbox-oportunidades">Concordo
       </label>
       <br>
-      <label for="checkbox-2">
-        <input type="checkbox" name="checkbox-concordo" id="checkbox-2">Concordo 2
+      <p>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</p>
+      <label for="checkbox-permissao">
+        <input type="checkbox" name="checkbox-2" id="checkbox-permissao">Concordo
       </label>
     </fieldset>
-<button type="submit" id="submit">Enviar</button>
-<button type="reset" id="reset">Apagar</button>
+    <div id="btns">
+      <button type="submit" id="submit" disabled>Enviar</button>
+      <button type="reset" id="reset">Apagar</button>
+    </div>
   </form>
 </body>
 
