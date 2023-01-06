@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+fieldset {
+  width: max-content;
+  padding: 10px;
+  margin: auto;
+}
+
+#form {
+  width: max-content;
+  margin: auto;
+}
+
+#input-email {
+margin-bottom: 10px;
+}
+
+.btn-radio {
+  margin-bottom: 10px;
+}
+
+#date{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#checkbox-oportunidades {
+  margin-bottom: 20px;
+}
+
+#btns {
+  margin: auto;
+  width: fit-content;
+  margin-top: 30px;
+
+}
