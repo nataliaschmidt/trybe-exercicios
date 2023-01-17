@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+header {
+  background-color: #023e8a;
+  color: white;
+}
+
+
+body {
+background-color: #edf2fb;
+}
+
+footer {
+  background-color: #023e8a;
+  color: white;
+}
+
+@media screen and (max-width: 360px) {
+  header nav {
+text-align: center;
+  }
+
+  header li {
+    list-style: none;
+  }
+
+
+  header p {
+    text-align: center;
+    font-size: 1.5em;
+padding: 15px;
+  }
+
+aside {
+  margin: 15px;
+  font-size: 0.9em;
+}
+aside h2 {
+  font-size: 1.5em;
+}
+
+article {
+  margin: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+margin-top: 5px;
+}
+}
