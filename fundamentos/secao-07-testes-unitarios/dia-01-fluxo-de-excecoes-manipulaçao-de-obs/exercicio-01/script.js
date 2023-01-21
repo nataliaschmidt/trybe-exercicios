@@ -16,6 +16,7 @@ function sum() {
   }
   catch (error) {
     document.getElementById('result').innerHTML = `Erro: ${error.message}`;
+    document.getElementById('result').style.color = 'red'
   }
   finally {
     document.getElementById('value1').value = '';
