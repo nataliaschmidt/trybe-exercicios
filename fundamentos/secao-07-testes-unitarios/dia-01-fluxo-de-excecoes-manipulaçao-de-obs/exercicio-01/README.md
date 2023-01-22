@@ -1,0 +1,1 @@
+### Criar errors personalizados para a função sum utilizando o throw new Error e o bloco try/catch.
