@@ -1,0 +1,15 @@
+{
+  "name": "secao-07-testes-unitarios",
+  "version": "1.0.0",
+  "description": "### Exercícios realizados na seção 07 do curso da Trybe",
+  "main": "myRemove.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
