@@ -80,3 +80,22 @@ if (!nameBook || book.name.length < nameBook.length) {
 }
 
 console.log(smallerName());
+
+
+
+
+// Outra forma de resolver
+// const expectedResult2 = "Duna";
+// const smallerName = () => {
+//   let nameBook = books.find((book) => true).name;
+//   books.forEach((book) => { 
+//     if (book.name.length < nameBook.length) {
+//       nameBook = book.name;
+//     }
+//   }); 
+  
+  
+//   // Variável nameBook que receberá o valor do menor nome;
+//   return nameBook;
+// };
+// console.log(smallerName());
