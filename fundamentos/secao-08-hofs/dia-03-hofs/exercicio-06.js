@@ -1,1 +1,0 @@
-const books = require('./dados')
