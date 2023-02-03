@@ -1,0 +1,17 @@
+{
+  "name": "validador-de-campos",
+  "version": "1.0.0",
+  "description": "Exercício realizado no primeiro dia da seção 1 do módulo de fundamentos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open"
+  },
+  "author": "Natália Klein Schmidt",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-trybe-frontend": "^1.7.0",
+    "validator": "^13.9.0",
+    "vite": "^4.1.1"
+  }
+}
