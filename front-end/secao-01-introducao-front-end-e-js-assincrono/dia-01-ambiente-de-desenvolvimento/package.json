@@ -1,0 +1,15 @@
+{
+  "name": "validador-de-campos",
+  "version": "1.0.0",
+  "description": "Exercício do primeiro dia da seção 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Natália Klein Schmidt",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.9.0",
+    "vite": "^4.1.1"
+  }
+}
