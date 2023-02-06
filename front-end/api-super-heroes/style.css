@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+background-color: #feb005;
+}
+
+h1 {
+  font-size: 6em;
+  padding: 40px;
+  font-family: 'Bangers', cursive;
+  text-shadow: 2px 4px 6px white;
+  color: #023047;
+}
+
+.card {
+  width: max-content;
+}
+
+.dados {
+padding: 20px;
+text-align: center;
+line-height: 40px;
+font-size: 2.0em;
+font-family: 'Comic Neue', cursive;
+color: #023047;
+font-weight: 700;
+}
+
+#button {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 10px;
+cursor: pointer;
+border: 1px solid black;
+box-shadow: 2px 2px 4px black;
+background-color: #a70b0b;
+color: white;
+}
+
+#button:hover {
+  background-color: #003566 ;
+  color: white;
+}
+
+
+#button:active {
+position: relative;
+top: 5px;
+}
