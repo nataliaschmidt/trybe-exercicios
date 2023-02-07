@@ -1,0 +1,47 @@
+@charset "UTF-8";
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eeeeee;
+}
+
+.app {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  border: 1px solid black;
+  background-color: #333333;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  box-shadow: 2px 2px 4px black;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+img {
+  border-radius: 5px;
+  box-shadow: 3px 3px 12px #333;
+  width: 100%;
+  padding: 10px;
+}

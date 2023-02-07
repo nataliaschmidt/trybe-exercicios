@@ -1,0 +1,19 @@
+{
+  "name": "select-pet",
+  "version": "1.0.0",
+  "description": "Aplicação que exibe fotos aleatórias de pets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open"
+  },
+  "author": "Natália K. Schmidt",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.1.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.33.0"
+  }
+}
