@@ -54,8 +54,8 @@ getBtn.addEventListener('click', (event) => {
       // você pode usar a função window.alert() também
       title: 'Hero not found',
       text: error.message,
-      color: '#023047',
-      background: 'white',
+      color: '#2b2d42',
+      background: '#d8e2dc',
       icon: 'error',
       position: 'center',
       confirmButtonText: 'Ok',
