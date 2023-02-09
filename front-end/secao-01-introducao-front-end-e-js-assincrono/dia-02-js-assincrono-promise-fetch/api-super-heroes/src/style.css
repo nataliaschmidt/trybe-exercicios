@@ -13,8 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-background-image: url(./image/bg-heroes.png);
-background-size: cover;
+background-color: #44a4f8;
 }
 
 h1 {
@@ -50,7 +49,7 @@ font-weight: 700;
   font-size: 2em;
 }
 
-#button {
+.btn {
   font-size: 1.5em;
   padding: 10px;
   border-radius: 10px;
@@ -61,13 +60,13 @@ background-color: #a70b0b;
 color: white;
 }
 
-#button:hover {
+.btn:hover {
   background-color: #003566 ;
   color: white;
 }
 
 
-#button:active {
+.btn:active {
 position: relative;
 top: 5px;
 }

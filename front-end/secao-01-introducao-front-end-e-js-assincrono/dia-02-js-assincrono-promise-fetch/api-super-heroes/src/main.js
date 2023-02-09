@@ -1,63 +1,76 @@
-// Importamos o Swal da biblioteca sweetalert2
 import Swal from 'sweetalert2';
-import "./style.css";
-// Criamos as constantes da nossa imagem, do nome e do botão
+import './style.css';
+
 const getImage = document.getElementById('image');
 const getHeroName = document.getElementById('name');
-const getBtn = document.getElementById('button');
-const getStatus = document.getElementById('status')
+const getBtnRandom = document.getElementById('btn-random');
+const getStatus = document.getElementById('status');
+const getBtnSearch = document.getElementById('btn-search');
+const getInput = document.getElementById('input-find-hero');
 
-const BASE_URL = `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id`;
+const BASE_URL = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id';
 
-// A API possui 731 heroínas e heróis cadastrados. Porém, para
-// simularmos um erro na API por não encontrar o id informado,
-// vamos colocar que a quantidade máxima de ids é superior ao
-// correto.
 const MAX_HEROES = 750;
-
 
 const randomId = () => Math.floor(Math.random() * MAX_HEROES);
 
-getBtn.addEventListener('click', (event) => {
-  event.preventDefault();
+const statusHero = (obj) => {
+    if (window.screen.width > '500') {
+        getImage.src = obj.images.md;
+    }
+    if (window.screen.width <= '500') {
+        getImage.src = obj.images.sm;
+    }
+    getImage.style.boxShadow = '0px 0px 8px 4px black';
+    getImage.style.borderRadius = '20px';
+    getImage.style.padding = '15px';
+    getHeroName.innerHTML = obj.name.toUpperCase();
+    const { powerstats:
+      { combat, durability, intelligence, power, speed, strength } } = obj;
+    getStatus.innerHTML = `Combat: ${combat}
+  Durability: ${durability}
+  Inteligence: ${intelligence}
+  Power: ${power}
+  Speed: ${speed}
+  Strength: ${strength}`;
+};
 
-  const id = randomId();
+getBtnRandom.addEventListener('click', (event) => {
+    event.preventDefault();
+    const id = randomId();
+    fetch(`${BASE_URL}/${id}.json`)
+        .then((result) => result.json())
+        .then((data) => {
+            statusHero(data);
+        })
+        .catch((error) => Swal.fire({
+            title: 'Hero not found',
+            text: error.message,
+            color: '#2b2d42',
+            background: '#d8e2dc',
+            icon: 'error',
+            position: 'center',
+            confirmButtonText: 'Ok',
+        }));
+});
 
-  // Faremos o fetch utilizando nossa URL e o id gerado
-  // pela função. Agora, note que devemos adicionar,
-  // além do ID, um '.json' ao final da URL
-  fetch(`${BASE_URL}/${id}.json`)
-  // Após o fetch, devemos extrair o objeto com a função .json()
-    .then((result) => {
-    //  console.log(result.json())
-      return result.json()})
-    .then((data) => {
-      // Uma vez extraído, vamos recuperar as informações
-      // que precisamos.
-      getImage.src = data.images.md;
-      getImage.style.boxShadow = '0px 0px 8px 4px black'
-      getImage.style.borderRadius = '20px'
-      getImage.style.padding = '15px'
-      getHeroName.innerHTML = data.name.toUpperCase();
-      const {powerstats: {combat: combat, durability: durability, intelligence: intelligence, power: power, speed: speed, strength: strength}} = data
-      getStatus.innerHTML =
-      `Combat: ${combat}
-      Durability: ${durability}
-      Inteligence: ${intelligence}
-      Power: ${power}
-      Speed: ${speed}
-      Strength: ${strength}`
-    })
-    // Caso haja erro, nós tratamos o mesmo com o .catch()
-    .catch((error) => Swal.fire({
-      // Aqui, estamos usando a nossa biblioteca, mas
-      // você pode usar a função window.alert() também
-      title: 'Hero not found',
-      text: error.message,
-      color: '#2b2d42',
-      background: '#d8e2dc',
-      icon: 'error',
-      position: 'center',
-      confirmButtonText: 'Ok',
-    }));
+getBtnSearch.addEventListener('click', async () => {
+    const response = await fetch('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json');
+    const data = await response.json();
+    // console.log(data);
+    const findHeroes = data
+        .find((hero) => getInput.value.toLowerCase() === hero.name.toLowerCase());
+    // console.log(findHeroes);
+    if (findHeroes === undefined) {
+        Swal.fire({
+            title: 'Hero not found',
+            color: '#2b2d42',
+            background: '#d8e2dc',
+            icon: 'error',
+            position: 'center',
+            confirmButtonText: 'Ok',
+        });
+    } else {
+        statusHero(findHeroes);
+    }
 });
