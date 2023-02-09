@@ -29,7 +29,7 @@ getBtn.addEventListener('click', (event) => {
   fetch(`${BASE_URL}/${id}.json`)
   // Após o fetch, devemos extrair o objeto com a função .json()
     .then((result) => {
-      // console.log(result.json())
+    //  console.log(result.json())
       return result.json()})
     .then((data) => {
       // Uma vez extraído, vamos recuperar as informações
@@ -37,14 +37,16 @@ getBtn.addEventListener('click', (event) => {
       getImage.src = data.images.md;
       getImage.style.boxShadow = '0px 0px 8px 4px black'
       getImage.style.borderRadius = '20px'
+      getImage.style.padding = '15px'
       getHeroName.innerHTML = data.name.toUpperCase();
+      const {powerstats: {combat: combat, durability: durability, intelligence: intelligence, power: power, speed: speed, strength: strength}} = data
       getStatus.innerHTML =
-      `Combat: ${data.powerstats.combat}
-      Durability: ${data.powerstats.durability}
-      Inteligence: ${data.powerstats.intelligence}
-      Power: ${data.powerstats.power}
-      Speed: ${data.powerstats.speed}
-      Strength: ${data.powerstats.strength}`
+      `Combat: ${combat}
+      Durability: ${durability}
+      Inteligence: ${intelligence}
+      Power: ${power}
+      Speed: ${speed}
+      Strength: ${strength}`
     })
     // Caso haja erro, nós tratamos o mesmo com o .catch()
     .catch((error) => Swal.fire({

@@ -13,7 +13,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-background-color: #feb005;
+background-image: url(./image/bg-heroes.png);
+background-size: cover;
 }
 
 h1 {
@@ -28,14 +29,22 @@ h1 {
   width: max-content;
 }
 
+#image {
+  background-color: white;
+}
+
 .dados {
 padding: 20px;
 text-align: center;
 line-height: 40px;
-font-size: 2.0em;
+font-size: 1.5em;
 font-family: 'Comic Neue', cursive;
 color: #023047;
 font-weight: 700;
+}
+
+.dados > :nth-child(1) {
+  font-size: 2em;
 }
 
 #button {
