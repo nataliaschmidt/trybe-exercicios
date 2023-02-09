@@ -13,18 +13,34 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-background-color: #44a4f8;
+  background-color: #44a4f8;
 }
 
 h1 {
   font-size: 6em;
-  padding: 40px;
+  padding: 20px;
   font-family: 'Bangers', cursive;
   /* text-shadow: 2px 4px 6px white; */
   color: white;
   text-shadow: 2px 2px 4px black;
   -webkit-text-stroke: 1px black;
+}
 
+#container-btn {
+ height: max-content;
+ margin-bottom: 20px;
+ display: flex;
+ gap: 10px;
+}
+
+input {
+  padding: 15px 40px;
+  border-radius: 10px;
+  cursor: text;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px black;
+  color: #023047;
+  font-size: 1.1em;
 }
 
 .card {
@@ -36,28 +52,35 @@ h1 {
 }
 
 .dados {
-padding: 20px;
-text-align: center;
-line-height: 40px;
-font-size: 1.5em;
-font-family: 'Comic Neue', cursive;
-color: #023047;
-font-weight: 700;
+  padding: 20px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5em;
+  font-family: 'Comic Neue', cursive;
+  color: #023047;
+  font-weight: 700;
 }
 
 .dados > :nth-child(1) {
   font-size: 2em;
+  text-shadow: 2px 2px 2px white;
+}
+
+.dados > :nth-child(2) {
+  line-height: 25px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .btn {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 10px;
   border-radius: 10px;
-cursor: pointer;
-border: 1px solid black;
-box-shadow: 2px 2px 4px black;
-background-color: #a70b0b;
-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px black;
+  background-color: #a70b0b;
+  color: white;
 }
 
 .btn:hover {
@@ -67,6 +90,40 @@ color: white;
 
 
 .btn:active {
-position: relative;
-top: 5px;
+  position: relative;
+  top: 5px;
 }
+
+/* max-width: 500px
+
+min wid: 500 - max 780
+
+min 780 - 1200
+min 1200 */
+
+@media screen and (max-width: 560px ) {
+  #container-btn {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 490px ) {
+  h1 {
+    font-size: 3.8em;
+  }
+  #container-btn {
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+  }
+  input {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px;
+  }
+  .btn {
+    padding: 7px;
+    width: 130px;
+  }
+}
+

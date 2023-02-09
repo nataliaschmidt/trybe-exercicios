@@ -15,10 +15,10 @@ const MAX_HEROES = 750;
 const randomId = () => Math.floor(Math.random() * MAX_HEROES);
 
 const statusHero = (obj) => {
-    if (window.screen.width > '500') {
+    if (window.screen.width > '560') {
         getImage.src = obj.images.md;
     }
-    if (window.screen.width <= '500') {
+    if (window.screen.width <= '560') {
         getImage.src = obj.images.sm;
     }
     getImage.style.boxShadow = '0px 0px 8px 4px black';
@@ -26,8 +26,9 @@ const statusHero = (obj) => {
     getImage.style.padding = '15px';
     getHeroName.innerHTML = obj.name.toUpperCase();
     const { powerstats:
-      { combat, durability, intelligence, power, speed, strength } } = obj;
-    getStatus.innerHTML = `Combat: ${combat}
+        { combat, durability, intelligence, power, speed, strength } } = obj;
+    getStatus.innerHTML =
+ `Combat: ${combat}
   Durability: ${durability}
   Inteligence: ${intelligence}
   Power: ${power}
