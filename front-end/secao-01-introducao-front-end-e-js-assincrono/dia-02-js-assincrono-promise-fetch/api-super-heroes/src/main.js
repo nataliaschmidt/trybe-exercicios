@@ -27,8 +27,7 @@ const statusHero = (obj) => {
     getHeroName.innerHTML = obj.name.toUpperCase();
     const { powerstats:
         { combat, durability, intelligence, power, speed, strength } } = obj;
-    getStatus.innerHTML =
- `Combat: ${combat}
+    getStatus.innerHTML = `Combat: ${combat}
   Durability: ${durability}
   Inteligence: ${intelligence}
   Power: ${power}
