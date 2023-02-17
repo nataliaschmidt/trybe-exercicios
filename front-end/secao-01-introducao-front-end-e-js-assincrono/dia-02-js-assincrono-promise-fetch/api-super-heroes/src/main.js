@@ -76,7 +76,9 @@ getBtnSearch.addEventListener('click', async () => {
             position: 'center',
             confirmButtonText: 'Ok',
         });
+        getInput.value = ''
     } else {
         statusHero(findHeroes);
+        getInput.value = ''
     }
 });
