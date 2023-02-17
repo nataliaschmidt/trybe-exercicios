@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@trybe/eslint-config-frontend": "^1.8.3",
+    "animate.css": "^4.1.1",
     "sweetalert2": "^11.7.1",
     "vite": "^4.1.1"
   },

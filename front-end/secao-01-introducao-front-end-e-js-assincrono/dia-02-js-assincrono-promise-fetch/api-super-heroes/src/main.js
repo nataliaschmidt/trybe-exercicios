@@ -1,34 +1,39 @@
 import Swal from 'sweetalert2';
 import './style.css';
+import 'animate.css';
 
-const getImage = document.getElementById('image');
+// const getImage = document.getElementById('image');
 const getHeroName = document.getElementById('name');
 const getBtnRandom = document.getElementById('btn-random');
 const getStatus = document.getElementById('status');
 const getBtnSearch = document.getElementById('btn-search');
 const getInput = document.getElementById('input-find-hero');
-
+const getDivCard = document.querySelector('.card');
 const BASE_URL = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id';
 
-const MAX_HEROES = 750;
+const MAX_HEROES = 700;
 
 const randomId = () => Math.floor(Math.random() * MAX_HEROES);
 
 const statusHero = (obj) => {
+    const getImage = document.createElement('img');
     if (window.screen.width > '560') {
         getImage.src = obj.images.md;
     }
     if (window.screen.width <= '560') {
         getImage.src = obj.images.sm;
     }
+    getImage.style.backgroundColor = 'white';
     getImage.style.boxShadow = '0px 0px 8px 4px black';
     getImage.style.borderRadius = '20px';
     getImage.style.padding = '15px';
+    getImage.classList.add('animate__animated', 'animate__flip');
+    getDivCard.appendChild(getImage);
     getHeroName.innerHTML = obj.name.toUpperCase();
+    console.log(obj);
     const { powerstats:
         { combat, durability, intelligence, power, speed, strength } } = obj;
-    getStatus.innerHTML =
- `Combat: ${combat}
+    getStatus.innerHTML = `Combat: ${combat}
   Durability: ${durability}
   Inteligence: ${intelligence}
   Power: ${power}
