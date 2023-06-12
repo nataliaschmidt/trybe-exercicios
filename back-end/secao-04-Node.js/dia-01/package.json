@@ -1,0 +1,16 @@
+{
+  "name": "dia-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bmi.js",
+  "scripts": {
+    "bmi": "node bmi.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "1.4.10"
+  }
+}
