@@ -17,15 +17,15 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      pageQuantity: {
+      page_quantity: {
         allowNull: true,
         type: DataTypes.INTEGER,
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: DataTypes.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: DataTypes.DATE,
       },
